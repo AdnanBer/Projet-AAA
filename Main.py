@@ -20,28 +20,28 @@ epsilon = 0.1
 # keys
 keys = pygame.key.get_pressed()
 
-# initializing window
+# initialisation de la fenêtre
 windowSurface = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT), 0, 32)
 
-# caption of the window
-pygame.display.set_caption('Running_window')
+# titre de la fenêtre
+pygame.display.set_caption('Grumble')
 
-# One font
+# police du titre
 basicFont = pygame.font.SysFont("Comic Sans MS", 60)
 
-# some colors
+# couleurs
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GREY = (127, 127, 127)
 
 
-# classes
+# création des classes
 
 class Character:
 
     def __init__(self, x, y):
 
-        self.dx = 0  # Speed of the character
+        self.dx = 0  # vitesse du personnage
         self.dy = 0
 
         self.image = pygame.image.load("jeu/persoRight.bmp").convert()  # charger l'image du joueur
