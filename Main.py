@@ -5,6 +5,15 @@ pygame.mixer.pre_init(44100, -16, 2, 2048)
 pygame.init()
 mainClock = pygame.time.Clock()
 
+import pygame
+file = 'sons/musique.wav'
+pygame.init()
+pygame.mixer.init()
+pygame.mixer.music.load(file)
+pygame.mixer.music.play(-1) # If the loops is -1 then the music will repeat indefinitely.
+
+
+
 # taille écran et fenêtre
 SIZE = 20
 WINDOWWIDTH = 800
