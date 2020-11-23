@@ -44,10 +44,10 @@ class Character:
         self.dx = 0  # Speed of the character
         self.dy = 0
 
-        self.image = pygame.image.load("jeu/persoRight.bmp").convert()  # load the character image
-        self.image.set_colorkey(GREY)  # set the transparent color = grey
+        self.image = pygame.image.load("jeu/persoRight.bmp").convert()  # charger l'image du joueur
+        self.image.set_colorkey(GREY)  # affilier la couleur grise au transparent
 
-        self.rect = self.image.get_rect()  # create the rectangle associated with the character
+        self.rect = self.image.get_rect()  # créer une hitbox rectangulaire autour du perso
         self.rect.left = x
         self.rect.bottom = y
         self.win = True
@@ -76,7 +76,7 @@ class Character:
 
     def move(self, collisionList):
 
-        # moves the character after calling all the methods which concerns the moving
+        # déplacer le personnage après que les méthodes move aient été utilisées
         self.grav()
         # self.friction()
 
@@ -91,13 +91,13 @@ class Character:
 
     def moveRight(self):
 
-        # moves the character to the Right and changes the character image accordingly
+        # déplacer le personnage vers la droite ainsi que l'image qui lui est affiliée
 
         self.dx = S
 
     def moveLeft(self):
 
-        # moves the character to the Left and changes the character image accordingly
+        # déplacer le personnage vers la gauche ainsi que l'image qui lui est affiliée
         self.dx = -S
 
     def jump(self, collisionList):
@@ -228,8 +228,8 @@ class Stuff:
         self.Y = Y
         self.stuffName = stuffName
         self.image = pygame.image.load('jeu/' + self.stuffName + ".bmp")
-        self.image.set_colorkey(GREY)  # set the transparent color = grey
-        self.rect = self.image.get_rect()  # create the rectangle associated with the platform
+        self.image.set_colorkey(GREY)  # cette commande permet de rendre le détourage gris en transparent
+        self.rect = self.image.get_rect()  # créer le rectangle associé avec la plateforme
         self.rect.left = SIZE * self.X
         self.rect.bottom = SIZE * (self.Y + 1)
 
