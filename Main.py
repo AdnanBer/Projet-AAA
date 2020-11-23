@@ -17,7 +17,7 @@ S = 5
 MAXS = 9
 epsilon = 0.1
 
-# keys
+# touches affiliées aux commandes du personnage
 keys = pygame.key.get_pressed()
 
 # initialisation de la fenêtre
