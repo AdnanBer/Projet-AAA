@@ -102,11 +102,11 @@ class Character:
 
     def jump(self, collisionList):
 
-        # checks for ground and make the character jump or not accordingly
+        # vérifier le sol afi de calibrer le saut du personnage
         self.rect.y += 1
-        if self.rect.bottom >= WINDOWHEIGHT:  # bottom ground
-            self.rect.bottom = WINDOWHEIGHT - 1  # Because the collision(self) makes self.y = 580 if self.y >= 580
-            self.dy = -J  # jump speed
+        if self.rect.bottom >= WINDOWHEIGHT:  # sol bas
+            self.rect.bottom = WINDOWHEIGHT - 1  # collision(self) implique self.y = 580 if self.y >= 580
+            self.dy = -J  # vitesse dde saut
             self.jumpSound.play()
         else:
             for c in collisionList:
@@ -119,7 +119,7 @@ class Character:
 
     def stop(self):
 
-        # stops the character from moving sideways
+        # arrêter le le déplacement du personnage sur les côtés
         char.dx = 0
 
     def grav(self):
@@ -138,7 +138,7 @@ class Character:
 
     def friction(self):
 
-        # Applies friction to the character. Doesn't really work as intended
+        # applique une certaine friction du personnage sur les éléments du jeu
         self.dy = self.dy * F
         self.dx = self.dx * F
 
@@ -172,7 +172,7 @@ class Character:
 
     def collisionY(self, level):
 
-        # check for collision and modifies the speed and the position accordingly
+        # vérifie la position et le déplacement du personnage
         for c in level.collisionList:
             if c[0].rect.colliderect(self.rect):
                 if c[1] == 't':
@@ -212,7 +212,7 @@ class Character:
         windowSurface.blit(self.imageCross, (3 * SIZE, SIZE * 3))
         windowSurface.blit(self.imageNumberOfCoins, (4 * SIZE, SIZE * 3))
 
-        windowSurface.blit(self.image, self.rect)  # blit the character onto the surface
+        windowSurface.blit(self.image, self.rect)  # fait apparaître le personnage à la surface
 
     def addCoin(self, numberOfCoins):
         self.coins += 1
@@ -405,7 +405,7 @@ while True:
         for plat in level.collisionList:
             plat[0].draw()
 
-        char.draw()  # draw the character
+        char.draw()  # dessine le perso
         char.move(level)
 
     elif inMenu:
@@ -458,8 +458,8 @@ while True:
                     char = Character(20, 500)
         windowSurface.blit(gameOverBackground, (0, 0))
 
-        # update the screen
+        # mets à jour l'écran
     pygame.display.flip()
 
-    # make the clock tick
+    # démarrer l'horloge
     mainClock.tick(FPS)
