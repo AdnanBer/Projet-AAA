@@ -5,7 +5,7 @@ C'est un simple jeu de plateforme composé de 4 niveaux de difficulté respectiv
 Vous qui aimez les jeux en 8-bit type SEGA et NES, découvrer l'histoire de Grumble un bonhomme qui n'avait pas remarqué qu'il y avait un trou dans son porte monnaie.
 Aidez-le à ramasser toutes ses pièces(sans mourrir si possible). 
 
-/!\Pour pouvoir ouvrir les portes, il faut bien ramasser toutes les pièces/!\ 
+###### /!\ Pour pouvoir ouvrir les portes, il faut bien ramasser toutes les pièces /!\ 
 
 Durant ce périple, ne vous laissez pas dissuader par Freeze, la lune la plus vicieuse de l'Univers, qui n'est pas avare de punchline pouvant vous déconcentrer !
 

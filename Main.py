@@ -38,7 +38,7 @@ pygame.display.set_caption('Grumble')
 # police du titre
 basicFont = pygame.font.SysFont("Comic Sans MS", 60)
 
-# couleurs
+# couleurs présentes dans le titre de la fenêtre
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 GREY = (127, 127, 127)
